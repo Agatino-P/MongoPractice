@@ -1,4 +1,6 @@
-﻿namespace MongoPractice.Api.EndpointHandlers;
+﻿using MongoPractice.Domain;
+
+namespace MongoPractice.Api.EndpointHandlers;
 
 public class GetShoppingListHandler
 {
@@ -12,6 +14,7 @@ public class GetShoppingListHandler
     public IResult Process()
     {
         _logger.LogInformation("Getting shopping list...");
-        return Results.Ok("A ShoppingList from Instance");
+        ShList shList = new ShList(Guid.NewGuid(), "Any Name Would Do");
+        return Results.Ok(shList.ToView());
     }
 }
