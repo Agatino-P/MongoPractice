@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MongoPractice.Api/MongoPractice.Api.csproj" />
+  <Project Path="MongoPractice.AppHost/MongoPractice.AppHost.csproj" />
+  <Project Path="MongoPractice.ServiceDefaults/MongoPractice.ServiceDefaults.csproj" />
+</Solution>
