@@ -15,7 +15,7 @@ public static class EndpointRouteBuilderExtensions
         RouteGroupBuilder apiGroup = app.MapGroup("/api/v{version:apiVersion}")
             .WithApiVersionSet(apiVersionSet);
 
-        apiGroup.MapGet("/ShoppingList", (GetShoppingListHandler handler) => handler.Process());
+        apiGroup.MapGet("/ShoppingList", (GetShoppingListHandler handler, Guid id) => handler.Process(id));
 
         return app;
     }
