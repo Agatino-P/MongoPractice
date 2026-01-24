@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MongoPractice.Application.UseCases.GetShoppingList;
-using System.ComponentModel.Design;
 
 namespace MongoPractice.Application.UseCases.ServiceExtensions;
 

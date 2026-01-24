@@ -11,6 +11,5 @@ public class GetShoppingListByIdPipeline : IGetShoppingListByIdPipeline
          await Task.CompletedTask;
          ShList shList = new ShList(id,id.ToString());
          return shList;
-         
      }
 }

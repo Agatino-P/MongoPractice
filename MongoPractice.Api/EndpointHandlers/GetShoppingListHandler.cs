@@ -1,9 +1,7 @@
 ﻿using LanguageExt;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using MongoPractice.Application.UseCases.GetShoppingList;
 using MongoPractice.Domain;
-using System.Net;
 
 namespace MongoPractice.Api.EndpointHandlers;
 
@@ -24,7 +22,6 @@ public class GetShoppingListHandler
     {
         _logger.LogInformation("Getting shopping list...");
         Either<ProblemDetails, ShList> either = await _getShoppingListByIdPipeline.Process(id);
-
 
         return either.Match<IResult>(
             shList => Results.Ok(shList.ToView()),

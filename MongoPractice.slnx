@@ -8,5 +8,6 @@
   <Project Path="MongoPractice.Application/MongoPractice.Application.csproj" />
   <Project Path="MongoPractice.Contracts/MongoPractice.Contracts.csproj" />
   <Project Path="MongoPractice.Domain/MongoPractice.Domain.csproj" />
+  <Project Path="MongoPractice.Infrastructure/MongoPractice.Infrastructure.csproj" />
   <Project Path="MongoPractice.ServiceDefaults/MongoPractice.ServiceDefaults.csproj" />
 </Solution>
