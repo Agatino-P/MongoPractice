@@ -1,6 +1,7 @@
 using Asp.Versioning;
 using Asp.Versioning.Builder;
 using MongoPractice.ServiceDefaults;
+using Scalar.AspNetCore;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
@@ -22,10 +23,16 @@ builder.Services.AddApiVersioning(options =>
 
 WebApplication app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    // 2. REQUIRED: Generates the JSON file at /openapi/v1.json
     app.MapOpenApi();
+
+    // 3. Serves the UI at /scalar/v1
+    app.MapScalarApiReference();
+    
+    // Optional: Redirect root to Scalar
+    app.MapGet("/", () => Results.Redirect("/scalar/v1"));
 }
 
 app.UseHttpsRedirection();
