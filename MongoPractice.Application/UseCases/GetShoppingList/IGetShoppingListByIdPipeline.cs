@@ -1,10 +1,8 @@
-﻿using LanguageExt;
-using Microsoft.AspNetCore.Mvc;
-using MongoPractice.Domain;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace MongoPractice.Application.UseCases.GetShoppingList;
 
 public interface IGetShoppingListByIdPipeline
 {
-    Task<Either<ProblemDetails, ShList>> Process(Guid id);
+    Task<Either<Error, ShList>> Process(Guid id);
 }

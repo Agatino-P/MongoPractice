@@ -9,6 +9,7 @@
     <ItemGroup>
         <PackageReference Include="Asp.Versioning.Http" />
         <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" />
+        <PackageReference Include="Aspire.MongoDB.Driver" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
         <PackageReference Include="Scalar.AspNetCore" />
     </ItemGroup>
@@ -18,6 +19,7 @@
       <ProjectReference Include="..\MongoPractice.Application\MongoPractice.Application.csproj" />
       <ProjectReference Include="..\MongoPractice.Contracts\MongoPractice.Contracts.csproj" />
       <ProjectReference Include="..\MongoPractice.Domain\MongoPractice.Domain.csproj" />
+      <ProjectReference Include="..\MongoPractice.Infrastructure\MongoPractice.Infrastructure.csproj" />
       <ProjectReference Include="..\MongoPractice.ServiceDefaults\MongoPractice.ServiceDefaults.csproj" />
     </ItemGroup>
 

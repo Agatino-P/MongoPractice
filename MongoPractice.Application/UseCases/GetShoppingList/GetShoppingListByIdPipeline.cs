@@ -1,15 +1,22 @@
-﻿using LanguageExt;
-using Microsoft.AspNetCore.Mvc;
-using MongoPractice.Domain;
+﻿using Microsoft.AspNetCore.Mvc;
+using MongoPractice.Infrastructure.Database;
 
 namespace MongoPractice.Application.UseCases.GetShoppingList;
 
 public class GetShoppingListByIdPipeline : IGetShoppingListByIdPipeline
 {
-     public async Task<Either<ProblemDetails, ShList>> Process(Guid id)
+    private readonly IShListRepository _repository;
+    private readonly ILogger<GetShoppingListByIdPipeline> _logger;
+
+    public GetShoppingListByIdPipeline(IShListRepository repository, ILogger<GetShoppingListByIdPipeline> logger)
+    {
+        _repository = repository;
+        _logger = logger;
+    }
+     public async Task<Either<Error, ShList>> Process(Guid id)
      {
-         await Task.CompletedTask;
-         ShList shList = new ShList(id,id.ToString());
-         return shList;
+         Either<Error, ShList> either = await _repository.GetById(id);         
+         
+         return either;
      }
 }

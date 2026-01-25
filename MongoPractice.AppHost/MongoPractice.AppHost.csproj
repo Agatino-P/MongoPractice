@@ -10,7 +10,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MongoPractice.Api\MongoPractice.Api.csproj" />
+        <PackageReference Include="Aspire.Hosting.MongoDB"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\MongoPractice.Api\MongoPractice.Api.csproj"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\MongoPractice.ServiceDefaults\MongoPractice.ServiceDefaults.csproj" IsAspireProjectResource="false"/>
     </ItemGroup>
 
 </Project>

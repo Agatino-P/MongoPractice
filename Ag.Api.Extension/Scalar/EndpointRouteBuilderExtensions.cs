@@ -11,13 +11,12 @@ public static class EndpointRouteBuilderExtensions
     {
         public void AgAddScalar()
         {
-            // 2. REQUIRED: Generates the JSON file at /openapi/v1.json
             app.MapOpenApi();
 
-            // 3. Serves the UI at /scalar/v1
             app.MapScalarApiReference();
-    
-            // Optional: Redirect root to Scalar
-            app.MapGet("/", () => Results.Redirect("/scalar/v1"));        }
+
+            app.MapGet("/", () => Results.Redirect("/scalar/v1"))
+                .ExcludeFromDescription();
+        }
     }
 }

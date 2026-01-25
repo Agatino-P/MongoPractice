@@ -1,5 +1,4 @@
-﻿using LanguageExt;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MongoPractice.Application.UseCases.GetShoppingList;
 using MongoPractice.Domain;
 
@@ -21,11 +20,18 @@ public class GetShoppingListHandler
     public async Task<IResult> Process(Guid id)
     {
         _logger.LogInformation("Getting shopping list...");
-        Either<ProblemDetails, ShList> either = await _getShoppingListByIdPipeline.Process(id);
-
+        EitherAsync<ProblemDetails, ShList> eitherAsync = 
+            _getShoppingListByIdPipeline.Process(id).ToAsync()
+                .MapLeft(toProblemDetails);
+        
+        
+        var either=await eitherAsync;
+        
         return either.Match<IResult>(
             shList => Results.Ok(shList.ToView()),
             pd => Results.Json(data: pd, statusCode: (pd.Status ?? StatusCodes.Status500InternalServerError))
         );
     }
+    private static ProblemDetails toProblemDetails(Error error)
+        => new ProblemDetails(){Detail =  error.Message};
 }
