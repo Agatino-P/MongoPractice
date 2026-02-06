@@ -3,6 +3,7 @@
     <File Path="Directory.Packages.props" />
   </Folder>
   <Project Path="Ag.Api.Extension/Ag.Api.Extension.csproj" />
+  <Project Path="MogoPractice.Wasm/MogoPractice.Wasm.csproj" />
   <Project Path="MongoPractice.Api/MongoPractice.Api.csproj" />
   <Project Path="MongoPractice.AppHost/MongoPractice.AppHost.csproj" />
   <Project Path="MongoPractice.Application/MongoPractice.Application.csproj" />
