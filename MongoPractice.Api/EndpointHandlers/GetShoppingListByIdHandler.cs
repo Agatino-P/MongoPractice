@@ -4,14 +4,14 @@ using MongoPractice.Domain;
 
 namespace MongoPractice.Api.EndpointHandlers;
 
-public class GetShoppingListHandler
+public class GetShoppingListByIdHandler
 {
     private readonly IGetShoppingListByIdPipeline _getShoppingListByIdPipeline;
-    private readonly ILogger<GetShoppingListHandler> _logger;
+    private readonly ILogger<GetShoppingListByIdHandler> _logger;
 
-    public GetShoppingListHandler(
+    public GetShoppingListByIdHandler(
         IGetShoppingListByIdPipeline getShoppingListByIdPipeline,
-        ILogger<GetShoppingListHandler> logger)
+        ILogger<GetShoppingListByIdHandler> logger)
     {
         _getShoppingListByIdPipeline = getShoppingListByIdPipeline;
         _logger = logger;

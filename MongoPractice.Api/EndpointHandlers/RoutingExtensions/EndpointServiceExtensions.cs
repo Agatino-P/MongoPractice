@@ -4,7 +4,7 @@ public static class EndpointServiceExtensions
 {
     public static IServiceCollection AddShoppingListHandlers(this IServiceCollection services)
     {
-        services.AddScoped<GetShoppingListHandler>();
+        services.AddScoped<GetShoppingListByIdHandler>();
         services.AddScoped<CreateShoppingListHandler>();
         return services;
     }
