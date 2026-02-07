@@ -1,8 +1,7 @@
-﻿using Ag.Api.Extension;
-using MongoPractice.Application.UseCases.CreateShoppingList;
+﻿using MongoPractice.Application.UseCases.CreateShoppingList;
 using MongoPractice.Contracts.Write.V1.Dtos;
 
-namespace MongoPractice.Api.EndpointHandlers;
+namespace MongoPractice.Api.EndpointHandlers.Write.V1;
 
 public partial class CreateShoppingListHandler
 {

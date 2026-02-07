@@ -1,4 +1,4 @@
-﻿using MongoPractice.Api.EndpointHandlers.V1;
+﻿using MongoPractice.Api.Read.V1;
 
 namespace MongoPractice.Api.EndpointHandlers.RoutingExtensions;
 
@@ -8,7 +8,7 @@ public static class EndpointServiceExtensions
     {
         services.AddScoped<GetShoppingListSummariesHandler>();
         services.AddScoped<GetShoppingListByIdHandler>();
-        services.AddScoped<CreateShoppingListHandler>();
+        services.AddScoped<Write.V1.CreateShoppingListHandler>();
         return services;
     }
 }

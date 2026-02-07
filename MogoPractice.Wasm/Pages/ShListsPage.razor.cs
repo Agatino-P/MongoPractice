@@ -8,11 +8,11 @@ public partial class ShListsPage
 {
     [Inject]
     public required IApiService ApiService { get; set; }
-    
-    protected IEnumerable<ShListViewV1>? ShListViews { get; private set; }
+
+    protected ShListSummaryViewV1[] ShListViews { get; private set; } = [];
     
     protected override async Task OnInitializedAsync()
     {
-        ShListViews = await ApiService.GetShoppingLists();
+        ShListViews = (await ApiService.GetShoppingLists()).ToArray();
     }
 }

@@ -4,5 +4,5 @@ namespace MogoPractice.Wasm.Services;
 
     public interface IApiService
     {
-        Task<IEnumerable<ShListViewV1>> GetShoppingLists();
+        Task<IEnumerable<ShListSummaryViewV1>> GetShoppingLists();
     }

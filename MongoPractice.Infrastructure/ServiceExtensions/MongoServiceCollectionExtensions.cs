@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MongoPractice.Infrastructure.Database.DataSources.GetShoppingListDataSource;
 using MongoPractice.Infrastructure.Database.DataSources.GetSummaries;
 using MongoPractice.Infrastructure.Database.Repositories;
 using MongoPractice.Infrastructure.MongoContext;
@@ -20,9 +21,9 @@ public static class MongoServiceCollectionExtensions
         });
 
         services.AddScoped<IShListRepository, ShListRepository>();
+        
         services.AddScoped<IShListSummariesDataSource,ShListSummariesDataSource >();
-        services.AddScoped<IShListRepository, ShListRepository>();
-
+        services.AddScoped<IShoppingListDataSource,ShoppingListDataSource >();
         
         return services;
     }

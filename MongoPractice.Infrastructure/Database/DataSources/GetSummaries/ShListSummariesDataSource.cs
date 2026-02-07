@@ -5,7 +5,6 @@ using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 using MongoPractice.Contracts.Read.V1.Views;
 using MongoPractice.Infrastructure.MongoContext;
-using MongoPractice.ServiceDefaults;
 
 namespace MongoPractice.Infrastructure.Database.DataSources.GetSummaries;
 
@@ -45,7 +44,7 @@ public class ShListSummariesDataSource : IShListSummariesDataSource
         }
     }
 
-    protected record ShListDoc(
+    private record ShListDoc(
         [property: BsonId] ObjectId MongoId,
         [property: BsonRepresentation(BsonType.String)]
         Guid Id,
@@ -53,7 +52,7 @@ public class ShListSummariesDataSource : IShListSummariesDataSource
         List<ShItemDoc>? ShItems
     );
 
-    protected record ShItemDoc(
+    private record ShItemDoc(
         [property: BsonId] ObjectId MongoId,
         [property: BsonRepresentation(BsonType.String)]
         Guid Id,

@@ -15,10 +15,10 @@ public class ApiService : IApiService
 
     }
 
-    public async Task<IEnumerable<ShListViewV1>> GetShoppingLists()
+    public async Task<IEnumerable<ShListSummaryViewV1>> GetShoppingLists()
     {
-        var shLists=
-            await _httpClient.GetFromJsonAsync<IEnumerable<ShListViewV1>>("/api/v1/shopping-list") ?? [];
-        return shLists;
+        IEnumerable<ShListSummaryViewV1> shListSummaryViews=
+            await _httpClient.GetFromJsonAsync<IEnumerable<ShListSummaryViewV1>>("/api/v1/shopping-list") ?? [];
+        return shListSummaryViews;
     }
 }

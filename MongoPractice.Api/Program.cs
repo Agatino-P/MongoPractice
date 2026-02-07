@@ -1,7 +1,6 @@
 using Ag.Api.Extension.Scalar;
 using MongoPractice.Api.EndpointHandlers.RoutingExtensions;
 using MongoPractice.Application.UseCases.ServiceExtensions;
-using MongoPractice.Infrastructure.Database.Repositories;
 using MongoPractice.Infrastructure.ServiceExtensions;
 using MongoPractice.ServiceDefaults;
 

@@ -3,7 +3,7 @@
 
 <h3>My Shopping Lists</h3>
 
-@if (ShListViews == null)
+@if (ShListViews.Length == 0)
 {
     <p><em>Loading...</em></p>
 }
@@ -11,12 +11,13 @@ else
 {
     <div class="row">
         @* Explicit type used here instead of 'var' *@
-        @foreach (ShListViewV1 shListView in ShListViews)
+        @foreach (ShListSummaryViewV1 shListSummaryView in ShListViews)
         {
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">@shListView.Name</h5>
+                        <h5 class="card-title">@shListSummaryView.Name</h5>
+                        <h5 class="card-title">@shListSummaryView.NumberOfItems</h5>
                     </div>
                 </div>
             </div>

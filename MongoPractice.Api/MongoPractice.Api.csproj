@@ -25,6 +25,7 @@
 
     <ItemGroup>
       <Folder Include="EndpointHandlers\Shared\" />
+      <Folder Include="EndpointHandlers\Write\" />
     </ItemGroup>
 
 </Project>

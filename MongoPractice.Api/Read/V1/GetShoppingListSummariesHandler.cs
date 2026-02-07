@@ -1,7 +1,7 @@
 ﻿using MongoPractice.Contracts.Read.V1.Views;
 using MongoPractice.Infrastructure.Database.DataSources.GetSummaries;
 
-namespace MongoPractice.Api.EndpointHandlers.V1;
+namespace MongoPractice.Api.Read.V1;
 
 public class GetShoppingListSummariesHandler
 {
