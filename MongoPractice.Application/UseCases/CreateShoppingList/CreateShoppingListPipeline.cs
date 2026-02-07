@@ -1,4 +1,5 @@
-﻿using MongoPractice.Infrastructure.Database;
+﻿using MongoPractice.Domain.Aggregates;
+using MongoPractice.Infrastructure.Database.Repositories;
 
 namespace MongoPractice.Application.UseCases.CreateShoppingList;
 
@@ -15,14 +16,17 @@ public class CreateShoppingListPipeline : ICreateShoppingListPipeline
 
     public async Task<Either<Error, Unit>> Process(CreateShoppingListPipelineInput pipelineInput)
     {
-        
-        Either<Error, Unit> either=await _repository.Add(toShList(pipelineInput));
+        ShList shList = toShList(pipelineInput);
+        Either<Error, Unit> either=await _repository.Add(shList);
 
         return either;
     }
 
     private static ShList toShList(CreateShoppingListPipelineInput pipelineInput)
-        => new ShList(pipelineInput.Id, pipelineInput.Name);
+        => new ShList(pipelineInput.Id, pipelineInput.Name, pipelineInput.ShItems.Select(toShItem));
+
+    private static ShItem toShItem(CreateShoppingListPipelineInput.ShItem pipelineInputShItem)
+        => new ShItem(pipelineInputShItem.Id, pipelineInputShItem.Name,pipelineInputShItem.Quantity);
 
 
 }

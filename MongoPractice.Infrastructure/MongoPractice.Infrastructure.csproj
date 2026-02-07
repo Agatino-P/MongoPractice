@@ -13,6 +13,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Ag.Api.Extension\Ag.Api.Extension.csproj" />
+      <ProjectReference Include="..\MongoPractice.Contracts\MongoPractice.Contracts.csproj" />
       <ProjectReference Include="..\MongoPractice.Domain\MongoPractice.Domain.csproj" />
       <ProjectReference Include="..\MongoPractice.ServiceDefaults\MongoPractice.ServiceDefaults.csproj" />
     </ItemGroup>
