@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MongoPractice.Domain.Aggregates;
 
 namespace MongoPractice.Application.UseCases.GetShoppingList;
 

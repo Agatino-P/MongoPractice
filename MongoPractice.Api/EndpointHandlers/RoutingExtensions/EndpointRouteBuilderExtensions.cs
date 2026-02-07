@@ -1,8 +1,9 @@
 ﻿using Asp.Versioning;
 using Asp.Versioning.Builder;
-using MongoPractice.Contracts.V1.Dtos;
+using MongoPractice.Api.EndpointHandlers.V1;
+using MongoPractice.Contracts.Write.V1.Dtos;
 
-namespace MongoPractice.Api.EndpointHandlers.Extensions;
+namespace MongoPractice.Api.EndpointHandlers.RoutingExtensions;
 
 public static class EndpointRouteBuilderExtensions
 {
@@ -16,6 +17,7 @@ public static class EndpointRouteBuilderExtensions
         RouteGroupBuilder apiGroup = app.MapGroup("/api/v{version:apiVersion}")
             .WithApiVersionSet(apiVersionSet);
 
+        apiGroup.MapGet("/shopping-list", (GetShoppingListSummariesHandler summariesHandler) => summariesHandler.Process());
         apiGroup.MapGet("/shopping-list/{id:guid}", (GetShoppingListByIdHandler byIdHandler, Guid id) => byIdHandler.Process(id));
         apiGroup.MapPost("/shopping-list", (CreateShoppingListHandler handler, CreateShListDtoV1 dto) => handler.Process(dto));
 

@@ -1,16 +1,15 @@
 using Ag.Api.Extension.Scalar;
-using MongoPractice.Api.EndpointHandlers;
-using MongoPractice.Api.EndpointHandlers.Extensions;
+using MongoPractice.Api.EndpointHandlers.RoutingExtensions;
 using MongoPractice.Application.UseCases.ServiceExtensions;
-using MongoPractice.Infrastructure.Database;
+using MongoPractice.Infrastructure.Database.Repositories;
+using MongoPractice.Infrastructure.ServiceExtensions;
 using MongoPractice.ServiceDefaults;
 
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
 
-builder.AddMongoDBClient(ResourceNames.MongoDb);
-builder.Services.AddScoped<IShListRepository, ShListRepository>();
+builder.Services.AddMongoServices(ResourceNames.MongoDb);
 
 builder.Services.AddOpenApi();
 builder.Services.AgAddApiVersioning();

@@ -23,4 +23,8 @@
       <ProjectReference Include="..\MongoPractice.ServiceDefaults\MongoPractice.ServiceDefaults.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="EndpointHandlers\Shared\" />
+    </ItemGroup>
+
 </Project>

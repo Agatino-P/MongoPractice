@@ -2,11 +2,11 @@ using MongoPractice.ServiceDefaults;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
-IResourceBuilder<MongoDBServerResource> mongo = builder.AddMongoDB("mongo")
+IResourceBuilder<MongoDBServerResource> mongo = builder.AddMongoDB(ResourceNames.MongoDb)
     .WithDataVolume()
     .WithMongoExpress();
 
-IResourceBuilder<MongoDBDatabaseResource> mongoDb = mongo.AddDatabase(ResourceNames.MongoDb);
+IResourceBuilder<MongoDBDatabaseResource> mongoDb = mongo.AddDatabase(ResourceNames.MongoConnection);
 
 IResourceBuilder<ProjectResource> api = builder.AddProject<Projects.MongoPractice_Api>("api")
     .WithReference(mongoDb)

@@ -1,4 +1,4 @@
-﻿using MongoPractice.Contracts.V1.Views;
+﻿using MongoPractice.Contracts.Read.V1.Views;
 using System.Net.Http.Json;
 
 namespace MogoPractice.Wasm.Services;

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using MogoPractice.Wasm.Services;
-using MongoPractice.Contracts.V1.Views;
+using MongoPractice.Contracts.Read.V1.Views;
 
 namespace MogoPractice.Wasm.Pages;
 

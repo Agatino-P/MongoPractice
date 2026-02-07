@@ -6,4 +6,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Read\V1\" />
+      <Folder Include="Write\" />
+    </ItemGroup>
+
 </Project>

@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MongoPractice.Infrastructure.Database;
+﻿using MongoPractice.Domain.Aggregates;
+using MongoPractice.Infrastructure.Database.Repositories;
 
 namespace MongoPractice.Application.UseCases.GetShoppingList;
 

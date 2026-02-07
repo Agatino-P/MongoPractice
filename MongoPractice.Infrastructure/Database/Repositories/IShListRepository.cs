@@ -1,4 +1,6 @@
-﻿namespace MongoPractice.Infrastructure.Database;
+﻿using MongoPractice.Domain.Aggregates;
+
+namespace MongoPractice.Infrastructure.Database.Repositories;
 
 public interface IShListRepository
 {
