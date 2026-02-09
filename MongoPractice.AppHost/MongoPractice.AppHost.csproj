@@ -14,8 +14,9 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\MogoPractice.Wasm\MogoPractice.Wasm.csproj" />
+        <ProjectReference Include="..\MongoPractice.Wasm\MongoPractice.Wasm.csproj" />
         <ProjectReference Include="..\MongoPractice.Api\MongoPractice.Api.csproj"/>
+        <ProjectReference Include="..\MongoPractice.Wasm\MongoPractice.Wasm.csproj" />
     </ItemGroup>
     
     <ItemGroup>

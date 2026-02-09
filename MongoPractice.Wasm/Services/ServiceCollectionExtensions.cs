@@ -1,4 +1,4 @@
-﻿namespace MogoPractice.Wasm.Services;
+﻿namespace MongoPractice.Wasm.Services;
 
 public static class ServiceCollectionExtensions
 {

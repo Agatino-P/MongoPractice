@@ -1,6 +1,6 @@
 ﻿using MongoPractice.Contracts.Read.V1.Views;
 
-namespace MogoPractice.Wasm.Services;
+namespace MongoPractice.Wasm.Services;
 
     public interface IApiService
     {

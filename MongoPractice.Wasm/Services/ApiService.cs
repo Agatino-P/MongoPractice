@@ -1,7 +1,7 @@
 ﻿using MongoPractice.Contracts.Read.V1.Views;
 using System.Net.Http.Json;
 
-namespace MogoPractice.Wasm.Services;
+namespace MongoPractice.Wasm.Services;
 
 public class ApiService : IApiService
 {

@@ -12,7 +12,7 @@ IResourceBuilder<ProjectResource> api = builder.AddProject<Projects.MongoPractic
     .WithReference(mongoDb)
     .WaitFor(mongoDb);
 
-IResourceBuilder<ProjectResource> wasm=builder.AddProject<Projects.MogoPractice_Wasm>("wasm")
+IResourceBuilder<ProjectResource> wasm=builder.AddProject<Projects.MongoPractice_Wasm>("wasm")
     .WithExternalHttpEndpoints()
     .WithReference(api)
     .WaitFor(api);
