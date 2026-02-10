@@ -14,12 +14,9 @@ else
         @foreach (ShListSummaryViewV1 shListSummaryView in ShListViews)
         {
             <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">@shListSummaryView.Name</h5>
-                        <h5 class="card-title">@shListSummaryView.NumberOfItems</h5>
-                    </div>
-                </div>
+                <a href="/shopping-list/@shListSummaryView.Id" style="text-decoration: none; color: inherit;">
+                    <ShListSummaryComponent ShListSummary="@shListSummaryView" />
+                </a>
             </div>
         }
     </div>
