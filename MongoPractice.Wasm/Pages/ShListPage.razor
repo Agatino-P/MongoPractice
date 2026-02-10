@@ -1,0 +1,23 @@
+@page "/shopping-list/{Id:guid}"
+@using MongoPractice.Contracts.Read.V1.Views
+
+@if (ShList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <h3>@ShList.Name</h3>
+
+    <div class="list-group">
+        @foreach (var item in ShList.Items)
+        {
+            <div class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">@item.Name</h5>
+                    <small>Qty: @item.Quantity</small>
+                </div>
+            </div>
+        }
+    </div>
+}

@@ -1,7 +1,7 @@
 ﻿using MongoPractice.Contracts.Read.V1.Views;
 using System.Net.Http.Json;
 
-namespace MogoPractice.Wasm.Services;
+namespace MongoPractice.Wasm.Services;
 
 public class ApiService : IApiService
 {
@@ -20,5 +20,10 @@ public class ApiService : IApiService
         IEnumerable<ShListSummaryViewV1> shListSummaryViews=
             await _httpClient.GetFromJsonAsync<IEnumerable<ShListSummaryViewV1>>("/api/v1/shopping-list") ?? [];
         return shListSummaryViews;
+    }
+
+    public async Task<ShListViewV1?> GetShoppingList(Guid id)
+    {
+        return await _httpClient.GetFromJsonAsync<ShListViewV1>($"/api/v1/shopping-list/{id}");
     }
 }

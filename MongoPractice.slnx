@@ -3,7 +3,6 @@
     <File Path="Directory.Packages.props" />
   </Folder>
   <Project Path="Ag.Api.Extension/Ag.Api.Extension.csproj" />
-  <Project Path="MogoPractice.Wasm/MogoPractice.Wasm.csproj" />
   <Project Path="MongoPractice.Api/MongoPractice.Api.csproj" />
   <Project Path="MongoPractice.AppHost/MongoPractice.AppHost.csproj" />
   <Project Path="MongoPractice.Application/MongoPractice.Application.csproj" />
@@ -11,4 +10,5 @@
   <Project Path="MongoPractice.Domain/MongoPractice.Domain.csproj" />
   <Project Path="MongoPractice.Infrastructure/MongoPractice.Infrastructure.csproj" />
   <Project Path="MongoPractice.ServiceDefaults/MongoPractice.ServiceDefaults.csproj" />
+  <Project Path="MongoPractice.Wasm/MongoPractice.Wasm.csproj" />
 </Solution>
