@@ -35,7 +35,7 @@ public partial class ShListRepository : IShListRepository
     }
 
     private static ShItem toShItem(ShItemEntity shItemEntity)
-        => new ShItem(shItemEntity.Id, shItemEntity.Name, shItemEntity.Quantity);
+        => new ShItem(shItemEntity.Id, shItemEntity.Name, shItemEntity.Quantity, shItemEntity.Status);
 
     [LoggerMessage(LogLevel.Information, "{className}.{methodName} was called with payload {jsonPayload}")]
     partial void logAddCalled(string className, string methodName, string jsonPayload);

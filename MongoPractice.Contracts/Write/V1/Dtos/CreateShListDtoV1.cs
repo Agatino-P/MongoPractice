@@ -2,4 +2,4 @@
 
 public record CreateShListDtoV1(Guid Id, string Name, IEnumerable <CreateShItemDtoV1> shItems);
 
-public record CreateShItemDtoV1(Guid Id, string Name, int Quantity);
+public record CreateShItemDtoV1(Guid Id, string Name, int Quantity, string Status);
