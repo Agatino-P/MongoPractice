@@ -1,5 +1,8 @@
 <Solution>
-  <Folder Name="/CentralPackageManager/">
+  <Folder Name="/SolutionFolder/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/SolutionFolder/CentralPackageManager/">
     <File Path="Directory.Packages.props" />
   </Folder>
   <Project Path="Ag.Api.Extension/Ag.Api.Extension.csproj" />
